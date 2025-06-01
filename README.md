@@ -14,6 +14,7 @@ This repository contains implementation of data structures and algorithms. Imple
 | O(n) linear time complexity | &#9989; | &#9989; | &#9989; |
 | O(1) constant time complexity | &#9989; | &#9989; | |
 | O(n^k) polynomial time complexity | &#9989; | | |
+| O(n1 * n2) multiple inputs | &#9989; | | |
 
 ### Data Structures
 
