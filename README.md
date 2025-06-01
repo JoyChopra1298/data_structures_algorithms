@@ -6,10 +6,12 @@ Implementation is done in following 3 languages
 2. Python
 3. Rust
 
+## Big O Notation
+1. O(n) linear time complexity
+
 ## Data Structures
 
 ## Algorithms
-
 
 ## References
 

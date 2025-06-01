@@ -34,7 +34,7 @@ fn main() {
     }
 }
 
-"""
+/*
 Output:
 
 n = 1, Operations = 1
@@ -47,4 +47,4 @@ n = 7, Operations = 7
 n = 8, Operations = 8
 n = 9, Operations = 9
 n = 10, Operations = 10
-"""
+*/
