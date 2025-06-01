@@ -1,17 +1,22 @@
 # data_structures_algorithms
-Implementation of data structures and algorithms
+This repository contains implementation of data structures and algorithms. Implementation is done in following 3 languages
 
-Implementation is done in following 3 languages
 1. C++
 2. Python
 3. Rust
 
-## Big O Notation
-1. O(n) linear time complexity
+## Topics covered
 
-## Data Structures
+### Big O Notation
 
-## Algorithms
+| Topic | Python | C++ | Rust |
+| -- | -- | -- | -- |
+| O(n) linear time complexity | &#9989; | &#9989; | &#9989; |
+| O(1) constant time complexity | &#9989; | &#9989; | |
+
+### Data Structures
+
+### Algorithms
 
 ## References
 
