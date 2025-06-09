@@ -3,7 +3,8 @@ In Python, the built-in list type is a dynamic array that can grow and shrink in
 It is heterogeneous, meaning it can store elements of different data types.
 """
 
-# Creating an array
+"""Creating an array"""
+
 # An array can be created using square brackets `[]` or the `list()` constructor.
 
 # Example of creating an array using square brackets

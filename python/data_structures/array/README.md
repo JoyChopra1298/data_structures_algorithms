@@ -21,3 +21,9 @@ An array is a collection of homogenous elements identified by their index. The e
 | Traverse() | Visit all elements once | O(n) |
 | Sort()| Rearrange elements in ascending or descending order | O(n.log(n))
 | Resize(n2) | Modify size of the array | O(n), applicable only for dynamic arrays|
+
+## Python built in operations 
+
+| Operation | Done |
+| -- | -- |
+| Create array | &#9989; |
