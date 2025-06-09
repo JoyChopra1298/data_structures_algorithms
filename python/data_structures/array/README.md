@@ -13,8 +13,11 @@ An array is a collection of homogenous elements identified by their index. The e
 | Operation | Description | Time Complexity |
 | -- | -- | -- |
 | Access(index) | Get element at index | O(1) |
+| Update(index, x) | Update value at specific index | O(1) |
 | Insert(index, x) | Insert element at index | O(n) |
 | Append(x) | Add element at end | O(1) for static array, O(n) when resizing is needed |
 | Delete(index) | Remove element at index | O(n) |
 | Search(x) | Find element by value | O(n) |
+| Traverse() | Visit all elements once | O(n) |
+| Sort()| Rearrange elements in ascending or descending order | O(n.log(n))
 | Resize(n2) | Modify size of the array | O(n), applicable only for dynamic arrays|
