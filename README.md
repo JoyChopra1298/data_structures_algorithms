@@ -9,6 +9,8 @@ This repository contains implementation of data structures and algorithms. Imple
 
 ### Big O Notation
 
+This section contains code examples of commonly occurring Big O complexities.
+
 | Topic | Python | C++ | Rust |
 | -- | -- | -- | -- |
 | O(n) linear time complexity | &#9989; | &#9989; | &#9989; |
@@ -17,6 +19,10 @@ This repository contains implementation of data structures and algorithms. Imple
 | O(n1 * n2) multiple inputs | &#9989; | | |
 
 ### Data Structures
+
+| Topic | Python | C++ | Rust |
+| -- | -- | -- | -- |
+| Array | &#9989; | | |
 
 ### Algorithms
 

@@ -10,8 +10,8 @@ def pair_sum(array1, array2): # O(n1 * n2) Time Complexity
     sum = 0
     total_operations = 0
 
-    for number1 in array1: # Outer loop runs n times
-        for number2 in array2: # Inner loop also runs n times
+    for number1 in array1: # Outer loop runs n1 times
+        for number2 in array2: # Inner loop runs n2 times
             sum += number1 * number2 # Constant time operation
             total_operations += 1
     return sum, total_operations
