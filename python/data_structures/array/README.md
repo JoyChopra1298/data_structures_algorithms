@@ -32,3 +32,7 @@ An array is a collection of homogenous elements identified by their index. The e
 | 4 | Insert value at index in array | &#9989; |
 | 5 | Append value in array | &#9989; |
 | 6 | Delete value at index in array | &#9989; |
+| 7 | Search value in array | &#9989; |
+| 8 | Traverse array | &#9989; |
+| 9 | Sort array | &#9989; |
+
