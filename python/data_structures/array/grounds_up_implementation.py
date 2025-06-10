@@ -99,7 +99,6 @@ class Array:
                 func(self.data[i])
 
 
-
 array = Array(2)  # Create an array with a capacity of 2
 print(f"Array: {array}. Current size: {array.size}, Capacity: {array.capacity}")
 
@@ -148,3 +147,30 @@ print("Traversing the array with a custom function:")
 def double_element(value):
     print(f"{value*2}")
 array.traverse(double_element)
+
+"""
+Output:
+
+Array: []. Current size: 0, Capacity: 2
+Array after appending 10 and 20: [10, 20]. Current size: 2, Capacity: 2
+Array after appending 30 (resize should occur): [10, 20, 30]. Current size: 3, Capacity: 4
+Element at index 0: 10
+Element at index -2: 20
+Array after appending 40: [10, 20, 30, 40]. Current size: 4, Capacity: 4
+Elements from index 1 to 3: [20, 30]
+Elements with step 2: [10, 30]
+Array after updating index 1 to 99: [10, 99, 30, 40]. Current size: 4, Capacity: 4
+Array after inserting 80 at index 2: [10, 99, 80, 30, 40]. Current size: 5, Capacity: 8
+Array after deleting element at index 0: [99, 80, 30, 40]. Current size: 4, Capacity: 8
+Element 80 found at index: 1
+Traversing the array:
+99
+80
+30
+40
+Traversing the array with a custom function:
+198
+160
+60
+80
+"""

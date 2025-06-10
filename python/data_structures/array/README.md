@@ -2,6 +2,19 @@
 
 An array is a collection of homogenous elements identified by their index. The elements are stored in contiguous memory locations. Each element in an array can be accessed directly using its index.
 
+## Tips
+Treat string as an array of characters
+
+When to use arrays
+1. Fast lookups
+2. Fast append/push/pop
+3. Ordered - contiguous storage in memory
+
+When not to use arrays
+1. Slow insert
+2. Slow delete
+3. Fixed size if using static array
+
 ## Static vs Dynamic Arrays
 
 **Static arrays** - The size of the array is fixed at initialisation. It cannot be changed later. Memory is allocated at compile time.
