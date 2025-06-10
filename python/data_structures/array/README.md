@@ -29,3 +29,4 @@ An array is a collection of homogenous elements identified by their index. The e
 | 1 | Create array | &#9989; |
 | 2 | Access array | &#9989; |
 | 3 | Update array | &#9989; |
+| 4 | Insert value in array | &#9989; |
