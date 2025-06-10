@@ -39,7 +39,7 @@ An array is a collection of homogenous elements identified by their index. The e
 ## Grounds up implementation 
 
 | Number | Operation | Done | Time |
-| -- | -- | -- |
+| -- | -- | -- | -- |
 | 1 | Create new array | &#9989; | O(n), where n is length of the array |
 | 2 | Append value in array | &#9989; | O(1) |
 | 3 | String representation | &#9989; | O(n) |
