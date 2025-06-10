@@ -26,7 +26,9 @@ An array is a collection of homogenous elements identified by their index. The e
 
 | Number | Operation | Done |
 | -- | -- | -- |
-| 1 | Create array | &#9989; |
-| 2 | Access array | &#9989; |
-| 3 | Update array | &#9989; |
-| 4 | Insert value in array | &#9989; |
+| 1 | Create new array | &#9989; |
+| 2 | Access index in array | &#9989; |
+| 3 | Update value at index in array | &#9989; |
+| 4 | Insert value at index in array | &#9989; |
+| 5 | Append value in array | &#9989; |
+| 6 | Delete value at index in array | &#9989; |
