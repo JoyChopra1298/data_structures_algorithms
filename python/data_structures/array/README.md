@@ -36,3 +36,18 @@ An array is a collection of homogenous elements identified by their index. The e
 | 8 | Traverse array | &#9989; |
 | 9 | Sort array | &#9989; |
 
+## Grounds up implementation 
+
+| Number | Operation | Done | Time |
+| -- | -- | -- |
+| 1 | Create new array | &#9989; | O(n), where n is length of the array |
+| 2 | Append value in array | &#9989; | O(1) |
+| 3 | String representation | &#9989; | O(n) |
+| 4 | Resize array | &#9989; | O(n) |
+| 5 | Access index in array | &#9989; | O(1) |
+| 6 | Access slice in array | &#9989; | O(k), where k is length of the slice |
+| 7 | Update value at index in array | &#9989; | O(1) |
+| 8 | Insert value at index in array | &#9989; | O(n) |
+| 9 | Delete value at index in array | &#9989; | O(n) |
+| 10 | Search value in array | &#9989; | O(n) |
+| 11 | Traverse array | &#9989; | O(n) |
