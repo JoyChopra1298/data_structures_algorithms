@@ -29,11 +29,26 @@ When not to use hash tables
 
 | Number | Operation | Description | Time Complexity |
 | -- | -- | -- | -- |
+| 1. | Access(key) | Access value for key | O(1) average, O(n) worst|
+| 2 | Update(key, x) | Update value at specific key | O(1) average, O(n) worst |
+| 3 | Insert(key, x) | Insert value at key | O(1) average, O(n) worst |
+| 4 | Delete(key) | Remove value at key | O(1) average, O(n) worst |
+| 5 | Traverse() | Visit all key-value pairs once | O(m) ~ O(n)*|
+| 6 | Keys() | Return list of all keys | O(m) ~ O(n)*|
+| 7 | Values() | Return list of all values | O(m) ~ O(n)*|
+| 8 | Entries() | Return list of all key-value pairs | O(m) ~ O(n)*|
+
+\* where m is number of buckets allocated for the hash table. Practically m is proportional to n, n ~ .7*m so O(n)
+
 
 ## Python built in operations 
 
 | Number | Operation | Done |
 | -- | -- | -- |
+| 1 | Create new hash table | &#9989; |
+| 2 | Access key in hash table | &#9989; |
+| 3 | Update value at key in hash table | &#9989; |
+| 4 | Insert value at key in hash table | &#9989; |
 
 ## Grounds up implementation 
 
