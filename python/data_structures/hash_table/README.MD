@@ -49,6 +49,11 @@ When not to use hash tables
 | 2 | Access key in hash table | &#9989; |
 | 3 | Update value at key in hash table | &#9989; |
 | 4 | Insert value at key in hash table | &#9989; |
+| 5 | Delete value at key in hash table | &#9989; |
+| 6 | Traverse key-value pairs of hash table | &#9989; |
+| 7 | Traverse keys of hash table | &#9989; |
+| 8 | Traverse values of hash table | &#9989; |
+| 9 | Search value in hash table | &#9989; |
 
 ## Grounds up implementation 
 
