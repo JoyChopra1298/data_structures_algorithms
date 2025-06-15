@@ -23,6 +23,7 @@ This section contains code examples of commonly occurring Big O complexities.
 | Topic | Python | C++ | Rust |
 | -- | -- | -- | -- |
 | Array | &#9989; | | |
+| Hash Tables | &#9989; | | |
 
 ### Algorithms
 
