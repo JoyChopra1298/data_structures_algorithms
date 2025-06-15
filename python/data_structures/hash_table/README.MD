@@ -2,7 +2,15 @@
 
 A hash table is a data structure that stores data in the form of key-value pairs. It provides efficient operations for inserting, accessing and deleting elements.
 
+## Hash functions
+
 Hash table achieves fast data access using hash functions. Hash function computes an index from the key. This index determines the position where the value is stored. Hash function computation takes O(1) constant time.
+
+Properties of a good hash function
+1. **Deterministic** - Produces same hash value for same input key
+2. **Uniform** - Evenly distributes keys to reduce collisions
+3. **Fast Computation** - Ideally it should compute in constant time for each key. O(1)
+4. **Avalanche effect** - Small changes in input drastically change the output hash value, improving distribution.
 
 ## Collisions
 
@@ -29,7 +37,7 @@ When not to use hash tables
 
 | Number | Operation | Description | Time Complexity |
 | -- | -- | -- | -- |
-| 1. | Access(key) | Access value for key | O(1) average, O(n) worst|
+| 1 | Access(key) | Access value for key | O(1) average, O(n) worst|
 | 2 | Update(key, x) | Update value at specific key | O(1) average, O(n) worst |
 | 3 | Insert(key, x) | Insert value at key | O(1) average, O(n) worst |
 | 4 | Delete(key) | Remove value at key | O(1) average, O(n) worst |
@@ -59,3 +67,13 @@ When not to use hash tables
 
 | Number | Operation | Done | Time |
 | -- | -- | -- | -- |
+| 1 | Create new hash table | &#9989; | O(n), where n is the capacity of the hash table |
+| 2 | Access key in hash table | &#9989; | O(1) average, O(n) worst | 
+| 3 | Resize hash table | &#9989; | O(n) | 
+| 4 | Insert value at key in hash table | &#9989; | O(1) average, O(n) worst | 
+| 5 | Update value at key in hash table | &#9989; | O(1) average, O(n) worst | 
+| 6 | Delete key in hash table | &#9989; | O(1) average, O(n) worst | 
+| 7 | Traverse key-value pairs of hash table | &#9989; | O(n) | 
+| 8 | Traverse keys of hash table | &#9989; | O(n) | 
+| 9 | Traverse values of hash table | &#9989; | O(n) | 
+| 10 | Search value in hash table | &#9989; | O(n) | 
