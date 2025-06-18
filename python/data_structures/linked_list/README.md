@@ -61,3 +61,7 @@ When not to use linked lists
 | 2 | Insert value at index | &#9989; | O(n) |
 | 3 | Prepend value | &#9989; | O(1) |
 | 4 | Append value | &#9989; | O(1) |
+| 5 | Access value at index | &#9989; | O(n) |
+| 6 | Update value at index | &#9989; | O(n) |
+| 7 | Delete node at index | &#9989; | O(n) |
+
