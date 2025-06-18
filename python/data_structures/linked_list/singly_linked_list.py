@@ -7,6 +7,9 @@ class Node:
         self.data = data  # Data stored in the node
         self.next = None  # Pointer to the next node in the list
 
+    def __str__(self):
+        return f"Node with data {self.data}"
+
 class SinglyLinkedList:
     """Singly linked list class."""
 
@@ -116,6 +119,31 @@ class SinglyLinkedList:
             current.next = current.next.next
         self.size -= 1
 
+    # Search operation takes O(n) time
+    def search(self, data):
+        """Search for a value in the list"""
+        current = self.head
+        while(current): 
+            if (data == current.data):
+                return current
+            else:
+                current = current.next
+        return None
+    
+    def traverse(self, func=None):
+        """
+        Traverse the linked list and apply function at each node.
+        Print element if no function is specified
+        """
+        current = self.head
+
+        while(current):
+            if func:
+                func(current.data)
+            else:
+                print(current.data)
+            current = current.next
+
 
     # String representation takes O(n) time, where n is the number of elements in the list
     def __str__(self):
@@ -157,6 +185,23 @@ linked_list.update(2, 16)  # Update middle element
 linked_list.update(4, 30)  # Update tail
 print("\nLinked List after updates:")
 print(linked_list)  # Output: 1 -> 10 -> 16 -> 20 -> 30
+
+# Search elements by value
+print("\nSearching elements")
+print(f"Node for value 1: {linked_list.search(1)}")
+print(f"Node for value 16: {linked_list.search(16)}")
+print(f"Node for value 30: {linked_list.search(30)}")
+print(f"Node for value 19: {linked_list.search(19)}")
+
+# Traverse the linked list
+print("\nTraversing the linked list:")
+linked_list.traverse()
+
+def double(value):
+    print(2 * value)
+    
+print("\nTraversing the linked list with double function:")
+linked_list.traverse(double)
 
 # Delete elements by index
 linked_list.delete(0)  # Delete head

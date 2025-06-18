@@ -64,4 +64,5 @@ When not to use linked lists
 | 5 | Access value at index | &#9989; | O(n) |
 | 6 | Update value at index | &#9989; | O(n) |
 | 7 | Delete node at index | &#9989; | O(n) |
-
+| 8 | Search value | &#9989; | O(n) |
+| 9 | Traverse list | &#9989; | O(n) |
