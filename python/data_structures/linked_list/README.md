@@ -7,8 +7,8 @@ A linked list is a linear data structure (forms a line) consisting of a sequence
 
 Memory for the nodes is allocated dynamically. The nodes are not stored contiguously like arrays.
 
-Head - The first node is called the head of the list
-Tail - The last node is called the tail of the list
+* Head - The first node is called the head of the list
+* Tail - The last node is called the tail of the list
 
 ## Types of linked lists
 
@@ -52,3 +52,12 @@ When not to use linked lists
 | 10 | Sort() | Sort the linked list | O(n.logn) |
 
 \* Practically faster than arrays because shifting of data elements is not required.
+
+## Grounds up implementation 
+
+| Number | Operation | Done | Time |
+| -- | -- | -- | -- |
+| 1 | Create new linked list | &#9989; | O(1) |
+| 2 | Insert value at index | &#9989; | O(n) |
+| 3 | Prepend value | &#9989; | O(1) |
+| 4 | Append value | &#9989; | O(1) |
