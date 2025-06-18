@@ -1,17 +1,18 @@
-"""Grounds up implementation of a singly linked list in Python."""
+"""Grounds up implementation of a doubly linked list in Python."""
 
 class Node:
-    """Node class for singly linked list."""
+    """Node class for doubly linked list."""
 
     def __init__(self, data):
         self.data = data  # Data stored in the node
         self.next = None  # Pointer to the next node in the list
+        self.prev = None  # Pointer to the previous node in the list
 
     def __str__(self):
         return f"Node with data {self.data}"
 
-class SinglyLinkedList:
-    """Singly linked list class."""
+class DoublyLinkedList:
+    """Doubly linked list class."""
 
     # Creating a singly linked list takes O(1) time
     def __init__(self):
@@ -35,6 +36,8 @@ class SinglyLinkedList:
             for _ in range(index - 1):
                 current = current.next
             new_node.next = current.next
+            new_node.prev = current
+            current.next.prev = new_node
             current.next = new_node
             self.size += 1
 
@@ -46,6 +49,7 @@ class SinglyLinkedList:
             self.head = new_node
             self.tail = new_node
         else:
+            self.head.prev = new_node
             new_node.next = self.head
             self.head = new_node
         self.size += 1
@@ -58,6 +62,7 @@ class SinglyLinkedList:
             self.head = new_node
             self.tail = new_node
         else:
+            new_node.prev = self.tail
             self.tail.next = new_node
             self.tail = new_node
         self.size += 1
@@ -111,11 +116,13 @@ class SinglyLinkedList:
         
         if index == 0:
             self.head = current.next
+            self.head.prev = None
 
         if current.next.next is None:
             current.next = None
             self.tail = current
         else:
+            current.next.next.prev = current
             current.next = current.next.next
         self.size -= 1
 
@@ -150,17 +157,26 @@ class SinglyLinkedList:
         """String representation of the linked list."""
         elements = []
         structure = []
+        reverse = []
         current = self.head
         while current:
             elements.append(current.data)
             current = current.next
+
         structure.append("Head: " + str(self.head.data) if self.head else "Head: None")
         structure.append("Tail: " + str(self.tail.data) if self.tail else "Tail: None")
         structure.append("Size: " + str(self.size))
-        return " -> ".join(map(str, elements)) + "\n" + ", ".join(structure)
+
+        current = self.tail
+        while current:
+            reverse.append(current.data)
+            current = current.prev
+
+        return (" -> ".join(map(str, elements)) + "\n" + 
+                ", ".join(structure) + "\n" + " <- ".join(map(str, reverse)))
 
 
-linked_list = SinglyLinkedList()
+linked_list = DoublyLinkedList()
 
 # Example usage
 linked_list.insert(0, 10)  # Insert at head
@@ -223,10 +239,12 @@ Output:
 Linked List after insertions:
 10 -> 15 -> 20
 Head: 10, Tail: 20, Size: 3
+20 <- 15 <- 10
 
 Linked List after prepend and append:
 5 -> 10 -> 15 -> 20 -> 25
 Head: 5, Tail: 25, Size: 5
+25 <- 20 <- 15 <- 10 <- 5
 
 Element at index 0: 5
 Element at index 2: 15
@@ -235,6 +253,7 @@ Element at index 4: 25
 Linked List after updates:
 1 -> 10 -> 16 -> 20 -> 30
 Head: 1, Tail: 30, Size: 5
+30 <- 20 <- 16 <- 10 <- 1
 
 Searching elements
 Node for value 1: Node with data 1
@@ -259,6 +278,7 @@ Traversing the linked list with double function:
 Linked List after deletions:
 10 -> 20
 Head: 10, Tail: 20, Size: 2
+20 <- 10
 
 Linked List after deleting all elements:
 
