@@ -17,6 +17,7 @@ This section contains code examples of commonly occurring Big O complexities.
 | O(1) constant time complexity | &#9989; | &#9989; | |
 | O(n^k) polynomial time complexity | &#9989; | | |
 | O(n1 * n2) multiple inputs | &#9989; | | |
+| O(logn) logarithmic time complexity | &#9989; | | |
 
 ### Data Structures
 
