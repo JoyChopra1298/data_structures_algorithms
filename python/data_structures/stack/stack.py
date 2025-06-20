@@ -36,16 +36,19 @@ class Stack:
         self.size -= 1
         return popped_data
 
+    # Peek operation takes O(1) time
     def peek(self):
         """Return the top item of the stack without removing it."""
         if self.is_empty():
             raise IndexError("Peek from empty stack")
         return self.top.data
 
+    # Check if the stack is empty takes O(1) time
     def is_empty(self):
         """Check if the stack is empty."""
         return self.size == 0
 
+    # Get the size of the stack takes O(1) time
     def __len__(self):
         """Return the size of the stack."""
         return self.size
