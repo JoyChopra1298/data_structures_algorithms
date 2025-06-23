@@ -28,6 +28,7 @@ This section contains code examples of commonly occurring Big O complexities.
 | Linked List | &#9989; | | |
 | Stack | &#9989; | | |
 | Queue | &#9989; | | |
+| Tree | &#9989; | | |
 
 ### Algorithms
 
