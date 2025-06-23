@@ -19,3 +19,19 @@ Each node has only one parent (except root node). A tree is a graph with no cycl
 2. Useful for searching and sorting large datasets (BST)
 3. Useful for database indexing (B-tree)
 4. Useful for autocomplete (Trie)
+
+## N-ary tree
+
+In a n-ary tree, each node can have at most n children. It is useful for file systems, HTML/XML parsing, AI trees, and organisational charts.
+
+## Operations
+
+| Number | Operation | Description | Time Complexity |
+| -- | -- | -- | -- |
+| 1 | Create() | Create a new empty tree | O(1) |
+| 2 | Insert(value) | Insert value in the tree | O(n) |
+| 3 | Remove(value) | Remove node with a particular value | O(n) |
+| 4 | Search(value) | Find node with a particular value | O(n) |
+| 5 | Traverse() | Visit all nodes of the tree - BFS/DFS | O(n) |
+
+Here, n = Number of nodes in the tree

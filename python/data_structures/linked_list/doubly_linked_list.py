@@ -146,7 +146,7 @@ class DoublyLinkedList:
 
         while(current):
             if func:
-                func(current.data)
+                func(current)
             else:
                 print(current.data)
             current = current.next
@@ -213,8 +213,8 @@ print(f"Node for value 19: {linked_list.search(19)}")
 print("\nTraversing the linked list:")
 linked_list.traverse()
 
-def double(value):
-    print(2 * value)
+def double(node):
+    print(2 * node.data)
 
 print("\nTraversing the linked list with double function:")
 linked_list.traverse(double)
