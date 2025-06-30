@@ -60,8 +60,8 @@ In a binary tree, each node can have at most 2 children. The children are usuall
 | 3 | Remove(value) | Remove node with a particular value | O(n) |
 | 4 | Search(value) | Find node with a particular value | O(n) |
 | 5 | LevelOrder_Traverse() | Visit all nodes of the tree level by level - BFS | O(n) |
-| 6 | Inorder_Traverse() | Visit all nodes in the order - left -> root -> right | O(n) | 
-| 7 | Preorder_Traverse() | Visit all nodes in the order - root -> left -> right | O(n) | 
-| 8 | Postorder_Traverse() | Visit all nodes in the order - left -> right -> root | O(n) | 
+| 6 | Inorder_Traverse() | Visit all nodes in the order - left -> root -> right - DFS | O(n) | 
+| 7 | Preorder_Traverse() | Visit all nodes in the order - root -> left -> right - DFS | O(n) | 
+| 8 | Postorder_Traverse() | Visit all nodes in the order - left -> right -> root - DFS | O(n) | 
 
 Here, n = Number of nodes in the tree

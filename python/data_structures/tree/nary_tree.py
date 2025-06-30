@@ -75,7 +75,6 @@ class TreeNode:
         else:
             return current
 
-
     def __str__(self):
         return f"Node with data {self.data} and {self.num_children} children"
     
@@ -169,8 +168,6 @@ class NaryTree:
                 replacement_node.num_children = 0
 
             # Step 2: Put replacement node instead of found node
-            # This means
-            # Found node's left sibling's next should be replacement node
             found_left_sibling = found_node.previous
             found_right_sibling = found_node.next
             found_parent = found_node.parent
@@ -219,7 +216,7 @@ class NaryTree:
     # BFS traversal takes O(n) time
     def bfs_traverse(self, func=None):
         """Breadth-first traversal of the N-ary tree."""
-        if not self.root:
+        if self.is_empty():
             return
 
         queue = Queue()
