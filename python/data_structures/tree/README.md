@@ -26,7 +26,7 @@ Each node has exactly one parent except root node. A tree is a graph with no cyc
 | -- | -- |
 | Nary tree | &#9989; |
 | Binary tree | &#9989; |
-| Binary search tree |  |
+| Binary search tree | &#9989; |
 | AVL tree |  |
 | Binary heap |  |
 | Trie (Prefix tree) |  |

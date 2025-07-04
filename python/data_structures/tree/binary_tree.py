@@ -100,12 +100,6 @@ class Queue:
         return self.size == 0
 
 
-class Color(Enum):
-    WHITE = "white"
-    GRAY = "gray"
-    BLACK = "black"
-
-
 class BinaryTreeNode:
 
     def __init__(self, data):
@@ -113,7 +107,6 @@ class BinaryTreeNode:
         self.left = None  # Left child of the node
         self.right = None  # Right child of the node
         self.parent = None  # Parent of the node
-        self.color = Color.WHITE.value  # Color of the node
 
     def __str__(self):
         return f"Node with data {self.data}"
@@ -148,13 +141,6 @@ class BinaryTree:
     def __init__(self):
         self.root = None
         self.size = 0
-
-    def reset_color(self):
-        def reset_color_node(node):
-            node.color = Color.WHITE.value
-            return False
-
-        self.bfs_traverse(reset_color_node) 
 
     # Insert operation takes O(n) time 
     def insert(self, data):
@@ -270,24 +256,24 @@ class BinaryTree:
             return
         
         stack = Stack()
-        current = self.root
-        current.color = Color.GRAY
-        stack.push(current)
+        # This will reverse the order to get post-order
+        result_stack = Stack()
+        stack.push(self.root)
 
         while not stack.is_empty():
-            current = stack.peek()
-
-            if current.left and current.left.color == Color.WHITE.value:
-                current.left.color = Color.GRAY.value
-                stack.push(current.left)
-                continue
-            
-            if current.right and current.right.color == Color.WHITE.value:
-                current.right.color = Color.GRAY.value
-                stack.push(current.right)
-                continue
-            
             current = stack.pop()
+            # Root gets pushed first in a stack, so it will be processed last
+            result_stack.push(current)
+            
+            # Push left child first, so left subtree will be processed later in stack
+            # and hence will be ahead in result stack
+            if current.left:
+                stack.push(current.left)
+            if current.right:
+                stack.push(current.right)
+            
+        while not result_stack.is_empty():
+            current = result_stack.pop()
             # Operate on the current node
             if func:
                 should_stop_traversal = func(current)
@@ -295,9 +281,6 @@ class BinaryTree:
                     return current
             else:
                 print(current)
-            current.color = Color.BLACK.value
-        
-        self.reset_color()
 
     # Preorder traversal takes O(n) time
     def preorder_traverse(self, func=None):
@@ -306,12 +289,11 @@ class BinaryTree:
             return
         
         stack = Stack()
-        current = self.root
-        current.color = Color.GRAY
-        stack.push(current)
+        stack.push(self.root)
 
         while not stack.is_empty():
             current = stack.pop()
+            
             # Operate on the current node
             if func:
                 should_stop_traversal = func(current)
@@ -319,16 +301,12 @@ class BinaryTree:
                     return current
             else:
                 print(current)
-            current.color = Color.BLACK.value
             
-            # Push right child first so that left child is processed first
+            # Push right child first, so left is processed first
             if current.right:
-                current.right.color = Color.GRAY.value
                 stack.push(current.right)
             if current.left:
-                current.left.color = Color.GRAY.value
                 stack.push(current.left)
-        self.reset_color()
 
     # Inorder traversal takes O(n) time
     def inorder_traverse(self, func=None):
@@ -338,16 +316,11 @@ class BinaryTree:
         
         stack = Stack()
         current = self.root
-        current.color = Color.GRAY
-        stack.push(current)
 
-        while not stack.is_empty():
-            current = stack.peek()
-
-            if current.left and current.left.color == Color.WHITE.value:
-                current.left.color = Color.GRAY.value
-                stack.push(current.left)
-                continue
+        while current or not stack.is_empty():
+            while current:
+                stack.push(current)
+                current = current.left
             
             current = stack.pop()
             # Operate on the current node
@@ -357,14 +330,8 @@ class BinaryTree:
                     return current
             else:
                 print(current)
-            current.color = Color.BLACK.value
-            
-            if current.right:
-                current.right.color = Color.GRAY.value
-                stack.push(current.right)
-                continue
-        
-        self.reset_color()
+
+            current = current.right
     
 
     # BFS traversal takes O(n) time
@@ -435,3 +402,73 @@ binary_tree.preorder_traverse()
 
 print("\nPostorder Traversal of Binary Tree:")
 binary_tree.postorder_traverse()
+
+"""
+Output: 
+
+Deleting from empty tree
+Tree is empty, cannot delete from it
+
+Searching for node with data 3:
+Node with data 3
+
+Deleting more nodes:
+Node with value 9 could not be found.
+Node with value 1 successfully deleted
+Node with value 2 successfully deleted
+
+BFS Traversal of Binary Tree:
+Node with data 7
+Node with data 5
+Node with data 3
+Node with data 4
+Node with data 9
+Node with data 6
+Node with data 10
+Node with data 8
+Node with data 11
+
+Inorder Traversal of Binary Tree:
+Node with data 8
+Node with data 4
+Node with data 11
+Node with data 5
+Node with data 9
+Node with data 7
+Node with data 6
+Node with data 3
+Node with data 10
+
+2nd time Inorder Traversal of Binary Tree:
+Node with data 8
+Node with data 4
+Node with data 11
+Node with data 5
+Node with data 9
+Node with data 7
+Node with data 6
+Node with data 3
+Node with data 10
+
+Preorder Traversal of Binary Tree:
+Node with data 7
+Node with data 5
+Node with data 4
+Node with data 8
+Node with data 11
+Node with data 9
+Node with data 3
+Node with data 6
+Node with data 10
+
+Postorder Traversal of Binary Tree:
+Node with data 8
+Node with data 11
+Node with data 4
+Node with data 9
+Node with data 5
+Node with data 6
+Node with data 10
+Node with data 3
+Node with data 7
+"""
